@@ -1,0 +1,38 @@
+!<arch>
+main.c/         1669030889  0     0     100666  243       `
+#include <stdio.h>
+#include <math.h>
+#include "mymath.h"
+#include "Show.h"
+
+int main() {
+    int a;
+    printf("Enter a value A: ");
+    scanf("%d", &a);
+
+    float q = 0;
+	q = SquareCircle(a);
+    ShowData(a, q);
+    return 0;
+}
+mymath.c/       1669026299  0     0     100666  126       `
+#include <stdio.h>
+#include "mymath.h"
+
+float SquareCircle(int R) {
+	float S;
+	S = (float) 3.14 * (R * R);
+	return S;
+}Show.c/         1669031583  0     0     100666  178       `
+#include <stdio.h>
+#include <stdlib.h>
+#include "Show.h"
+
+void ShowData(int a, float r)
+{
+	system("cls");
+	
+	printf("a = %d\n", a);
+	printf("S = %8.2f", r);
+	return;
+}
