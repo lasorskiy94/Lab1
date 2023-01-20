@@ -1,5 +1,5 @@
 main.exe: libmy.lib
-	gcc libmy.lib -o main.exe
+	gcc main.c -L. -lmy -o main.exe
 main.o: main.c mymath.h Show.h
 	gcc -c main.c
 mymath.o: mymath.c mymath.h
